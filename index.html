@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
   <title>UrbanCraft Luxury Interiors & Modular Studio | Delhi NCR</title>
   <meta name="description" content="Award-winning luxury interior design & modular home studio in Delhi NCR. 45-day handover guarantee, German factory finish, 10-year warranty & free 3D VR design." />
   
@@ -49,11 +49,11 @@
           keyframes: {
             floatOne: {
               '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-              '50%': { transform: 'translate(20px, -20px) scale(1.08)' },
+              '50%': { transform: 'translate(15px, -15px) scale(1.05)' },
             },
             floatTwo: {
               '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
-              '50%': { transform: 'translate(-20px, 20px) scale(1.1)' },
+              '50%': { transform: 'translate(-15px, 15px) scale(1.05)' },
             },
             shimmer: {
               '0%': { backgroundPosition: '-200% 0' },
@@ -70,7 +70,7 @@
   </script>
 
   <style>
-    /* Mandatory Responsive & Fluid Layout Reset */
+    /* Mandatory Responsive Base Reset (Rule Enforced) */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -78,6 +78,7 @@
     }
 
     html, body {
+      width: 100%;
       max-width: 100%;
       overflow-x: clip;
       background: #faf8f5;
@@ -88,10 +89,16 @@
       min-height: 100vh;
     }
 
+    img, video, svg, canvas, iframe {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* Custom Luxury Gold/Emerald Scrollbar */
     ::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
     }
     ::-webkit-scrollbar-track {
       background: #f1ede6;
@@ -103,7 +110,7 @@
 
     /* Architectural Glass Cards */
     .glass-header-luxury {
-      background: rgba(250, 248, 245, 0.9);
+      background: rgba(250, 248, 245, 0.92);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(217, 119, 6, 0.15);
@@ -112,13 +119,13 @@
     .luxury-card {
       background: #ffffff;
       border: 1px solid #f1ece4;
-      box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 25px -6px rgba(15, 23, 42, 0.05), 0 3px 6px -2px rgba(0, 0, 0, 0.02);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .luxury-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(217, 119, 6, 0.4);
-      box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.15);
+      transform: translateY(-3px);
+      border-color: rgba(217, 119, 6, 0.35);
+      box-shadow: 0 16px 35px -8px rgba(217, 119, 6, 0.12);
     }
 
     /* Gold Gradient Highlight Container */
@@ -126,13 +133,13 @@
       position: relative;
       background: #ffffff;
       border-radius: 1.5rem;
-      box-shadow: 0 20px 45px -10px rgba(217, 119, 6, 0.2);
+      box-shadow: 0 18px 40px -10px rgba(217, 119, 6, 0.18);
     }
     .gold-glow-border::before {
       content: '';
       position: absolute;
       inset: -2px;
-      border-radius: 1.65rem;
+      border-radius: 1.62rem;
       background: linear-gradient(90deg, #d97706, #064e3b, #f59e0b, #c2410c, #d97706);
       background-size: 300% 300%;
       animation: gradientX 6s ease infinite;
@@ -152,82 +159,82 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s ease-out;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Text Fluid Clamp Utilities */
+    /* Fluid Clamp Typography */
     .fluid-h1 {
-      font-size: clamp(2.2rem, 5.8vw + 0.6rem, 3.5rem);
+      font-size: clamp(1.85rem, 5.5vw + 0.5rem, 3.25rem);
       line-height: 1.15;
     }
     .fluid-h2 {
-      font-size: clamp(1.65rem, 3.8vw + 0.3rem, 2.4rem);
+      font-size: clamp(1.45rem, 3.5vw + 0.3rem, 2.25rem);
       line-height: 1.25;
     }
   </style>
 </head>
-<body class="flex flex-col items-center min-h-screen pb-24 md:pb-12 selection:bg-amber-600 selection:text-white relative">
+<body class="flex flex-col items-center min-h-screen pb-28 sm:pb-16 selection:bg-amber-600 selection:text-white relative">
 
   <!-- Ambient Luxury Glow Orbs -->
   <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
-    <div class="absolute -top-16 -left-16 w-96 h-96 bg-gradient-to-br from-amber-200/40 to-orange-200/30 rounded-full blur-[100px] animate-float-1"></div>
-    <div class="absolute top-1/3 -right-16 w-96 h-96 bg-gradient-to-bl from-emerald-200/40 to-teal-200/35 rounded-full blur-[100px] animate-float-2"></div>
-    <div class="absolute top-2/3 left-10 w-96 h-96 bg-gradient-to-tr from-rose-200/35 to-amber-200/35 rounded-full blur-[90px] animate-float-1"></div>
+    <div class="absolute -top-16 -left-16 w-80 h-80 bg-gradient-to-br from-amber-200/40 to-orange-200/30 rounded-full blur-[90px] animate-float-1"></div>
+    <div class="absolute top-1/3 -right-16 w-80 h-80 bg-gradient-to-bl from-emerald-200/40 to-teal-200/35 rounded-full blur-[90px] animate-float-2"></div>
+    <div class="absolute top-2/3 left-10 w-80 h-80 bg-gradient-to-tr from-rose-200/35 to-amber-200/35 rounded-full blur-[90px] animate-float-1"></div>
   </div>
 
   <!-- ==========================================
-       MAIN APP CONTAINER (Mobile-First Max-W-XL)
+       MAIN APP CONTAINER (100% Fluid Auto-Fit)
        ========================================== -->
-  <div class="w-full max-w-xl mx-auto min-h-screen bg-[#faf8f5]/95 backdrop-blur-2xl border-x border-[#e8e2d8] shadow-[0_25px_70px_-15px_rgba(15,23,42,0.12)] relative z-10 flex flex-col">
+  <div class="w-full max-w-xl mx-auto min-h-screen bg-[#faf8f5]/95 backdrop-blur-2xl border-x border-[#e8e2d8] shadow-[0_20px_60px_-15px_rgba(15,23,42,0.1)] relative z-10 flex flex-col">
 
-    <!-- 1. TOP ANNOUNCEMENT BAR (Warm Gold & Terracotta Gradient) -->
-    <section class="w-full bg-gradient-to-r from-amber-700 via-amber-800 to-emerald-900 py-2.5 px-4 text-center text-xs sm:text-sm font-bold flex flex-wrap items-center justify-center gap-2 relative overflow-hidden shadow-md">
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <section class="w-full bg-gradient-to-r from-amber-700 via-amber-800 to-emerald-900 py-2 px-3 sm:px-4 text-center text-[11px] sm:text-xs font-bold flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 relative overflow-hidden shadow-md">
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shimmer-fast" style="background-size: 200% 100%;"></div>
-      <span class="inline-flex items-center justify-center bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow-sm uppercase tracking-widest font-heading">
-        ✨ DIWALI HOME MAKEOVER
+      <span class="inline-flex items-center justify-center bg-amber-400 text-slate-950 text-[9px] sm:text-[10px] font-black px-2 py-0.5 rounded-full shadow-sm uppercase tracking-wider font-heading">
+        ✨ DIWALI OFFER
       </span>
-      <p class="text-white font-bold drop-shadow-sm">
-        Get <span class="text-amber-300 font-extrabold underline decoration-wavy">FREE 3D VR Design</span> + Modular Kitchen Chimney!
+      <p class="text-white font-bold drop-shadow-sm truncate">
+        Get <span class="text-amber-300 font-extrabold underline decoration-wavy">FREE 3D VR Design</span> + Kitchen Chimney!
       </p>
     </section>
 
     <!-- 2. STICKY LUXURY HEADER -->
-    <header class="sticky top-0 z-40 w-full glass-header-luxury py-3.5 px-4 flex items-center justify-between shadow-sm">
-      <!-- Logo & Online Status -->
-      <a href="#" class="flex items-center gap-2.5 group">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-600 via-amber-500 to-emerald-700 p-[2px] shadow-md shadow-amber-600/20 group-hover:scale-105 transition-transform duration-300">
+    <header class="sticky top-0 z-40 w-full glass-header-luxury py-3 px-3 sm:px-4 flex items-center justify-between shadow-sm">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2 group min-w-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-amber-600 via-amber-500 to-emerald-700 p-[2px] shadow-md shadow-amber-600/20 group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
           <div class="w-full h-full bg-[#111827] rounded-[14px] flex items-center justify-center">
-            <i data-lucide="sparkles" class="w-5 h-5 text-amber-400 stroke-[2.5]"></i>
+            <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 stroke-[2.5]"></i>
           </div>
         </div>
-        <div class="flex flex-col">
-          <span class="font-heading font-black text-base tracking-tight text-slate-900 flex items-center gap-1.5">
+        <div class="flex flex-col min-w-0">
+          <span class="font-heading font-black text-sm sm:text-base tracking-tight text-slate-900 flex items-center gap-1.5 truncate">
             UrbanCraft <span class="text-amber-700 font-display italic font-bold">Living</span>
-            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981] animate-pulse-slow"></span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981] animate-pulse-slow flex-shrink-0"></span>
           </span>
-          <span class="text-[10px] uppercase font-extrabold tracking-wider text-amber-800">
+          <span class="text-[9px] sm:text-[10px] uppercase font-extrabold tracking-wider text-amber-800 truncate">
             Luxury Interiors • Delhi NCR
           </span>
         </div>
       </a>
 
-      <!-- Quick Action Buttons in Header -->
-      <div class="flex items-center gap-2">
-        <a href="tel:+919876543210" aria-label="Direct Call" class="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm">
+      <!-- Header CTAs -->
+      <div class="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+        <a href="tel:+919876543210" aria-label="Direct Call" class="p-2 sm:p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 hover:bg-amber-600 hover:text-white transition-all duration-200 shadow-sm">
           <i data-lucide="phone-call" class="w-4 h-4"></i>
         </a>
-        <a href="#quick-estimate" class="px-4 py-2 rounded-xl text-xs font-black font-heading bg-gradient-to-r from-amber-600 via-amber-700 to-emerald-800 text-white hover:brightness-110 active:scale-95 transition-all duration-200 shadow-md shadow-amber-800/30 flex items-center gap-1.5">
+        <a href="#quick-estimate" class="px-3 sm:px-4 py-2 rounded-xl text-xs font-black font-heading bg-gradient-to-r from-amber-600 via-amber-700 to-emerald-800 text-white hover:brightness-110 active:scale-95 transition-all duration-200 shadow-md shadow-amber-800/30 flex items-center gap-1">
           <span>Get Quote</span>
           <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 stroke-[3]"></i>
         </a>
       </div>
     </header>
 
-    <!-- 3. HERO SECTION (Editorial Luxury Architecture Aesthetic) -->
-    <section class="px-4 pt-7 pb-8 relative overflow-hidden flex flex-col items-center text-center">
+    <!-- 3. HERO SECTION -->
+    <section class="px-3.5 sm:px-4 pt-6 pb-8 relative overflow-hidden flex flex-col items-center text-center">
       
-      <!-- Verified Rating Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-amber-300 shadow-md shadow-amber-600/10 mb-5">
+      <!-- Rating Badge -->
+      <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white border border-amber-300 shadow-sm mb-4">
         <div class="flex items-center text-amber-500 text-xs gap-0.5">
           <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
           <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-500"></i>
@@ -237,10 +244,10 @@
         </div>
         <span class="text-xs font-black text-slate-900">4.92 / 5.0</span>
         <span class="text-amber-300 text-xs">•</span>
-        <span class="text-xs text-amber-900 font-bold">1,200+ Homes Transformed</span>
+        <span class="text-xs text-amber-900 font-bold">1,200+ Homes Handed Over</span>
       </div>
 
-      <!-- High Impact Headline -->
+      <!-- Headline -->
       <h1 class="fluid-h1 font-display font-extrabold text-slate-900 tracking-tight mb-3">
         Turn Your Dream Home Into <br />
         <span class="font-display italic font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-orange-600 to-emerald-800 drop-shadow-sm">
@@ -248,95 +255,92 @@
         </span>
       </h1>
 
-      <p class="text-slate-600 text-sm sm:text-base max-w-md mb-6 leading-relaxed font-medium">
-        Delhi NCR’s premier bespoke interior design studio. German precision factory finish with a strict <span class="text-emerald-800 font-bold">45-day move-in guarantee</span> & 10-year warranty.
+      <p class="text-slate-600 text-xs sm:text-sm md:text-base max-w-md mb-6 leading-relaxed font-medium">
+        Delhi NCR’s premier bespoke interior studio. German precision factory finish with a strict <span class="text-emerald-800 font-bold">45-day move-in guarantee</span> & 10-year warranty.
       </p>
 
-      <!-- Key Stat Boxes (4 Luxury Gold & Emerald Cards) -->
-      <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-7">
-        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-amber-600 bg-gradient-to-b from-amber-50/60 to-white">
-          <span class="font-heading text-lg font-black text-amber-700">1,500+</span>
-          <span class="text-[11px] text-slate-600 font-bold mt-0.5">Homes Done</span>
+      <!-- Key Stat Boxes (Auto-Fit 2x2 or 4 Columns) -->
+      <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 mb-6">
+        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-amber-600 bg-gradient-to-b from-amber-50/60 to-white min-w-0">
+          <span class="font-heading text-base sm:text-lg font-black text-amber-700 truncate">1,500+</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-600 font-bold mt-0.5 truncate">Homes Done</span>
         </div>
-        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-emerald-700 bg-gradient-to-b from-emerald-50/60 to-white">
-          <span class="font-heading text-lg font-black text-emerald-800">45 Days</span>
-          <span class="text-[11px] text-slate-600 font-bold mt-0.5">Handover Rule</span>
+        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-emerald-700 bg-gradient-to-b from-emerald-50/60 to-white min-w-0">
+          <span class="font-heading text-base sm:text-lg font-black text-emerald-800 truncate">45 Days</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-600 font-bold mt-0.5 truncate">Handover Rule</span>
         </div>
-        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-orange-600 bg-gradient-to-b from-orange-50/60 to-white">
-          <span class="font-heading text-lg font-black text-orange-700">10 Years</span>
-          <span class="text-[11px] text-slate-600 font-bold mt-0.5">Full Warranty</span>
+        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-orange-600 bg-gradient-to-b from-orange-50/60 to-white min-w-0">
+          <span class="font-heading text-base sm:text-lg font-black text-orange-700 truncate">10 Years</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-600 font-bold mt-0.5 truncate">Full Warranty</span>
         </div>
-        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-slate-800 bg-gradient-to-b from-slate-50 to-white">
-          <span class="font-heading text-lg font-black text-slate-900">0% Cost EMI</span>
-          <span class="text-[11px] text-slate-600 font-bold mt-0.5">Instant Approval</span>
+        <div class="luxury-card p-3 rounded-2xl flex flex-col items-center text-center border-t-4 border-t-slate-800 bg-gradient-to-b from-slate-50 to-white min-w-0">
+          <span class="font-heading text-base sm:text-lg font-black text-slate-900 truncate">0% EMI</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-600 font-bold mt-0.5 truncate">Instant Approval</span>
         </div>
       </div>
 
       <!-- Dual High-Converting CTA Buttons -->
-      <div class="w-full flex flex-col sm:flex-row gap-3">
-        <a href="https://wa.me/919876543210?text=Hi%20UrbanCraft,%20I%20want%20to%20get%20a%20Free%203D%20Design%20%26%20Cost%20Estimate%20for%20my%20Home." target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 px-5 rounded-2xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-105 text-white font-heading font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-800/30 active:scale-[0.98] transition-all duration-200">
-          <i data-lucide="message-circle" class="w-5 h-5 fill-white stroke-[1.5]"></i>
+      <div class="w-full flex flex-col sm:flex-row gap-2.5 sm:gap-3">
+        <a href="https://wa.me/919876543210?text=Hi%20UrbanCraft,%20I%20want%20to%20get%20a%20Free%203D%20Design%20%26%20Cost%20Estimate%20for%20my%20Home." target="_blank" rel="noopener noreferrer" class="w-full flex-1 py-3.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-105 text-white font-heading font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-800/30 active:scale-[0.98] transition-all duration-200">
+          <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 fill-white stroke-[1.5]"></i>
           <span>WhatsApp Design Consultation</span>
         </a>
-        <a href="tel:+919876543210" class="flex-1 py-3.5 px-5 rounded-2xl bg-gradient-to-r from-amber-700 via-amber-800 to-slate-900 hover:brightness-105 text-white font-heading font-black text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-900/30 active:scale-[0.98] transition-all duration-200">
+        <a href="tel:+919876543210" class="w-full flex-1 py-3.5 px-4 rounded-2xl bg-gradient-to-r from-amber-700 via-amber-800 to-slate-900 hover:brightness-105 text-white font-heading font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-900/30 active:scale-[0.98] transition-all duration-200">
           <i data-lucide="phone" class="w-4 h-4 text-amber-300"></i>
           <span>Call: +91 98765 43210</span>
         </a>
       </div>
 
-      <!-- Trust Badges Bar -->
-      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-5 text-xs">
-        <span class="flex items-center gap-1.5 bg-amber-100/90 text-amber-900 border border-amber-300 font-bold px-3 py-1 rounded-full shadow-sm">
-          <i data-lucide="shield-check" class="w-4 h-4 text-amber-700"></i> BWP Marine Grade Ply
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mt-4 text-[10px] sm:text-xs">
+        <span class="flex items-center gap-1 bg-amber-100/90 text-amber-900 border border-amber-300 font-bold px-2.5 py-1 rounded-full shadow-sm">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-700"></i> BWP Marine Grade Ply
         </span>
-        <span class="flex items-center gap-1.5 bg-emerald-100/90 text-emerald-900 border border-emerald-300 font-bold px-3 py-1 rounded-full shadow-sm">
-          <i data-lucide="clock-check" class="w-4 h-4 text-emerald-700"></i> ₹1000/Day Delay Penalty
-        </span>
-        <span class="flex items-center gap-1.5 bg-orange-100/90 text-orange-900 border border-orange-300 font-bold px-3 py-1 rounded-full shadow-sm">
-          <i data-lucide="layers" class="w-4 h-4 text-orange-700"></i> German Blum Hardware
+        <span class="flex items-center gap-1 bg-emerald-100/90 text-emerald-900 border border-emerald-300 font-bold px-2.5 py-1 rounded-full shadow-sm">
+          <i data-lucide="clock-check" class="w-3.5 h-3.5 text-emerald-700"></i> ₹1000/Day Delay Penalty
         </span>
       </div>
     </section>
 
-    <!-- 4. INTERACTIVE INSTANT COST ESTIMATOR (CRO CALCULATOR) -->
-    <section class="px-4 py-8 bg-gradient-to-b from-white via-amber-50/40 to-white border-t border-amber-200/60">
-      <div class="text-center mb-6">
+    <!-- 4. INTERACTIVE INSTANT COST ESTIMATOR (Auto-Fit Controls) -->
+    <section class="px-3.5 sm:px-4 py-7 bg-gradient-to-b from-white via-amber-50/40 to-white border-t border-amber-200/60">
+      <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Interactive Tool</span>
         <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Instant Interior Cost Calculator</h2>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Select your home configuration for a transparent real-time estimate</p>
+        <p class="text-xs text-slate-500 mt-1 font-medium">Select your home configuration for real-time estimate</p>
       </div>
 
-      <div class="luxury-card p-5 rounded-3xl border-2 border-amber-200">
-        <!-- Home Type Selector Buttons -->
+      <div class="luxury-card p-4 sm:p-5 rounded-3xl border-2 border-amber-200">
+        <!-- 1. Home Type Selector Buttons -->
         <label class="block text-xs font-bold text-slate-700 mb-2">1. Select Home Type:</label>
-        <div class="grid grid-cols-4 gap-2 mb-4">
-          <button type="button" onclick="setHomeType('1BHK', 350000, this)" class="type-btn py-2.5 px-2 rounded-xl border border-amber-300 bg-amber-50 text-amber-900 font-heading font-black text-xs text-center transition-all shadow-sm">1 BHK</button>
-          <button type="button" onclick="setHomeType('2BHK', 550000, this)" class="type-btn py-2.5 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">2 BHK</button>
-          <button type="button" onclick="setHomeType('3BHK', 790000, this)" class="type-btn py-2.5 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">3 BHK</button>
-          <button type="button" onclick="setHomeType('Villa', 1350000, this)" class="type-btn py-2.5 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">Villa</button>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+          <button type="button" onclick="setHomeType('1BHK', 350000, this)" class="type-btn py-2 px-2 rounded-xl border border-amber-400 bg-amber-50 text-amber-900 font-heading font-black text-xs text-center transition-all shadow-sm">1 BHK</button>
+          <button type="button" onclick="setHomeType('2BHK', 550000, this)" class="type-btn py-2 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">2 BHK</button>
+          <button type="button" onclick="setHomeType('3BHK', 790000, this)" class="type-btn py-2 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">3 BHK</button>
+          <button type="button" onclick="setHomeType('Villa', 1350000, this)" class="type-btn py-2 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all">Villa</button>
         </div>
 
-        <!-- Scope / Quality Selector -->
+        <!-- 2. Scope / Quality Selector -->
         <label class="block text-xs font-bold text-slate-700 mb-2">2. Interior Package Level:</label>
-        <div class="grid grid-cols-2 gap-2.5 mb-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
           <div onclick="setQuality('Premium', 1, this)" class="quality-btn p-3 rounded-xl border-2 border-amber-600 bg-amber-50/70 cursor-pointer transition-all">
             <p class="font-heading font-black text-xs text-amber-900">Premium Finish</p>
-            <p class="text-[11px] text-slate-500 font-medium">BWP Ply + Merino Laminates + Soft-Close</p>
+            <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium">BWP Ply + Merino Laminates + Soft-Close</p>
           </div>
           <div onclick="setQuality('Luxury Bespoke', 1.45, this)" class="quality-btn p-3 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-amber-300 transition-all">
             <p class="font-heading font-black text-xs text-slate-800">Ultra Luxury Bespoke</p>
-            <p class="text-[11px] text-slate-500 font-medium">Acrylic Glass + Fluted Panels + Italian Marble</p>
+            <p class="text-[10px] sm:text-[11px] text-slate-500 font-medium">Acrylic Glass + Fluted Panels + Italian Marble</p>
           </div>
         </div>
 
         <!-- Calculated Live Result Box -->
-        <div class="p-4 rounded-2xl bg-[#0f172a] text-white flex items-center justify-between shadow-xl">
-          <div>
-            <span class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Estimated Project Budget</span>
-            <div class="font-heading font-black text-2xl text-white mt-0.5" id="estimatePriceDisplay">₹3,50,000*</div>
-            <span class="text-[10px] text-slate-400 font-medium">Includes 3D VR, Materials & Installation</span>
+        <div class="p-3.5 sm:p-4 rounded-2xl bg-[#0f172a] text-white flex items-center justify-between shadow-xl gap-2">
+          <div class="min-w-0">
+            <span class="text-[10px] sm:text-[11px] text-amber-400 font-bold uppercase tracking-wider block truncate">Estimated Budget</span>
+            <div class="font-heading font-black text-xl sm:text-2xl text-white mt-0.5 truncate" id="estimatePriceDisplay">₹3,50,000*</div>
+            <span class="text-[9px] sm:text-[10px] text-slate-400 font-medium block truncate">Includes 3D VR & Installation</span>
           </div>
-          <a href="#quick-estimate" onclick="applyEstimateToForm()" class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-heading font-black text-xs hover:brightness-110 shadow-md transition-all flex items-center gap-1 flex-shrink-0">
+          <a href="#quick-estimate" onclick="applyEstimateToForm()" class="px-3 sm:px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-heading font-black text-xs hover:brightness-110 shadow-md transition-all flex items-center gap-1 flex-shrink-0">
             <span>Lock Offer</span>
             <i data-lucide="chevron-right" class="w-3.5 h-3.5 stroke-[3]"></i>
           </a>
@@ -345,97 +349,97 @@
     </section>
 
     <!-- 5. 6 CORE TRANSFORMATION SERVICES -->
-    <section class="px-4 py-8 bg-white/70 border-t border-amber-200/60">
-      <div class="text-center mb-6">
+    <section class="px-3.5 sm:px-4 py-7 bg-white/70 border-t border-amber-200/60">
+      <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent font-heading">Our Expertise</span>
-        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">End-to-End Interior Solutions</h2>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1 font-medium">Crafted with European precision & lifelong durability</p>
+        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">End-to-End Solutions</h2>
+        <p class="text-xs text-slate-500 mt-1 font-medium">Crafted with European precision & lifelong durability</p>
       </div>
 
-      <div class="grid grid-cols-1 gap-3.5">
+      <div class="grid grid-cols-1 gap-3">
         <!-- Service 1 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-amber-600">
-          <div class="flex items-start gap-3.5">
-            <div class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-200 text-amber-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm">
-              <i data-lucide="utensils" class="w-6 h-6"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-amber-600">
+          <div class="flex items-start gap-3 min-w-0">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-amber-100 border border-amber-200 text-amber-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+              <i data-lucide="utensils" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <div>
-              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-amber-800 transition-colors">German Modular Kitchens</h3>
-              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Waterproof BWP Ply, Blum hinges, quartz countertops.</p>
-              <div class="flex items-center gap-2 mt-1.5">
-                <span class="text-xs text-slate-400 line-through">₹2.4 Lakh</span>
-                <span class="text-sm font-extrabold text-amber-700">Starts ₹1.65 Lakh</span>
-                <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-full">10-Yr Warranty</span>
+            <div class="min-w-0">
+              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-amber-800 transition-colors truncate">German Modular Kitchens</h3>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Waterproof BWP Ply, Blum hinges, quartz counter.</p>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1.5">
+                <span class="text-xs text-slate-400 line-through">₹2.4L</span>
+                <span class="text-xs sm:text-sm font-extrabold text-amber-700">Starts ₹1.65L</span>
+                <span class="text-[9px] sm:text-[10px] bg-amber-100 text-amber-900 font-bold px-1.5 py-0.2 rounded-full">10-Yr Warranty</span>
               </div>
             </div>
           </div>
-          <a href="#quick-estimate" onclick="selectInteriorService('Modular Kitchen')" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
+          <a href="#quick-estimate" onclick="selectInteriorService('Modular Kitchen')" class="px-3 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-amber-700 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
             Book
           </a>
         </div>
 
         <!-- Service 2 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-emerald-700 relative overflow-hidden">
-          <div class="absolute -right-6 top-2 bg-gradient-to-l from-emerald-700 to-teal-800 text-white text-[9px] font-black uppercase px-6 py-0.5 rotate-12 shadow-sm font-heading">
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-emerald-700 relative overflow-hidden">
+          <div class="absolute -right-6 top-2 bg-gradient-to-l from-emerald-700 to-teal-800 text-white text-[8px] sm:text-[9px] font-black uppercase px-6 py-0.5 rotate-12 shadow-sm font-heading">
             BESTSELLER
           </div>
-          <div class="flex items-start gap-3.5">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm">
-              <i data-lucide="home" class="w-6 h-6"></i>
+          <div class="flex items-start gap-3 min-w-0">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+              <i data-lucide="home" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <div>
-              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-800 transition-colors">Full Home Turnkey Interior</h3>
+            <div class="min-w-0">
+              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-emerald-800 transition-colors truncate">Full Home Turnkey Interior</h3>
               <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Living, bedrooms, false ceiling, lighting & paint.</p>
-              <div class="flex items-center gap-2 mt-1.5">
-                <span class="text-xs text-slate-400 line-through">₹7.5 Lakh</span>
-                <span class="text-sm font-extrabold text-emerald-800">Starts ₹4.99 Lakh</span>
-                <span class="text-[10px] bg-emerald-100 text-emerald-900 font-bold px-2 py-0.5 rounded-full">45-Day Move-In</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1.5">
+                <span class="text-xs text-slate-400 line-through">₹7.5L</span>
+                <span class="text-xs sm:text-sm font-extrabold text-emerald-800">Starts ₹4.99L</span>
+                <span class="text-[9px] sm:text-[10px] bg-emerald-100 text-emerald-900 font-bold px-1.5 py-0.2 rounded-full">45-Day Move-In</span>
               </div>
             </div>
           </div>
-          <a href="#quick-estimate" onclick="selectInteriorService('Full Home Turnkey')" class="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
+          <a href="#quick-estimate" onclick="selectInteriorService('Full Home Turnkey')" class="px-3 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
             Book
           </a>
         </div>
 
         <!-- Service 3 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-orange-600">
-          <div class="flex items-start gap-3.5">
-            <div class="w-12 h-12 rounded-2xl bg-orange-100 border border-orange-200 text-orange-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm">
-              <i data-lucide="door-closed" class="w-6 h-6"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-orange-600">
+          <div class="flex items-start gap-3 min-w-0">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-orange-100 border border-orange-200 text-orange-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+              <i data-lucide="door-closed" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <div>
-              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-orange-800 transition-colors">Floor-to-Ceiling Wardrobes</h3>
-              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Fluted glass, sliding lacquered glass & internal sensor LEDs.</p>
-              <div class="flex items-center gap-2 mt-1.5">
-                <span class="text-xs text-slate-400 line-through">₹1.2 Lakh</span>
-                <span class="text-sm font-extrabold text-orange-700">Starts ₹75,000</span>
-                <span class="text-[10px] bg-orange-100 text-orange-900 font-bold px-2 py-0.5 rounded-full">Anti-Fungus</span>
+            <div class="min-w-0">
+              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-orange-800 transition-colors truncate">Floor-to-Ceiling Wardrobes</h3>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Fluted glass, sliding lacquered glass & LEDs.</p>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1.5">
+                <span class="text-xs text-slate-400 line-through">₹1.2L</span>
+                <span class="text-xs sm:text-sm font-extrabold text-orange-700">Starts ₹75,000</span>
+                <span class="text-[9px] sm:text-[10px] bg-orange-100 text-orange-900 font-bold px-1.5 py-0.2 rounded-full">Anti-Fungus</span>
               </div>
             </div>
           </div>
-          <a href="#quick-estimate" onclick="selectInteriorService('Modular Wardrobe')" class="px-4 py-2 rounded-xl bg-gradient-to-r from-orange-600 to-amber-700 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
+          <a href="#quick-estimate" onclick="selectInteriorService('Modular Wardrobe')" class="px-3 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-orange-600 to-amber-700 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
             Book
           </a>
         </div>
 
         <!-- Service 4 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-indigo-700">
-          <div class="flex items-start gap-3.5">
-            <div class="w-12 h-12 rounded-2xl bg-indigo-100 border border-indigo-200 text-indigo-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm">
-              <i data-lucide="tv" class="w-6 h-6"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-center justify-between gap-3 group border-l-4 border-l-indigo-700">
+          <div class="flex items-start gap-3 min-w-0">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-indigo-100 border border-indigo-200 text-indigo-800 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform shadow-sm">
+              <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
             </div>
-            <div>
-              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-indigo-800 transition-colors">Living Room & Luxury TV Units</h3>
-              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Italian marble back panels, warm acoustic louvers.</p>
-              <div class="flex items-center gap-2 mt-1.5">
-                <span class="text-xs text-slate-400 line-through">₹95,000</span>
-                <span class="text-sm font-extrabold text-indigo-800">Starts ₹55,000</span>
-                <span class="text-[10px] bg-indigo-100 text-indigo-900 font-bold px-2 py-0.5 rounded-full">Custom Fit</span>
+            <div class="min-w-0">
+              <h3 class="font-heading font-bold text-sm sm:text-base text-slate-900 group-hover:text-indigo-800 transition-colors truncate">Living Room & TV Units</h3>
+              <p class="text-xs text-slate-500 mt-0.5 line-clamp-1 font-medium">Italian marble back panels & louvers.</p>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mt-1.5">
+                <span class="text-xs text-slate-400 line-through">₹95k</span>
+                <span class="text-xs sm:text-sm font-extrabold text-indigo-800">Starts ₹55,000</span>
+                <span class="text-[9px] sm:text-[10px] bg-indigo-100 text-indigo-900 font-bold px-1.5 py-0.2 rounded-full">Custom Fit</span>
               </div>
             </div>
           </div>
-          <a href="#quick-estimate" onclick="selectInteriorService('Living Room Decor')" class="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-700 to-slate-900 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
+          <a href="#quick-estimate" onclick="selectInteriorService('Living Room Decor')" class="px-3 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-700 to-slate-900 hover:brightness-110 text-white font-heading font-black text-xs shadow-sm transition-all flex-shrink-0">
             Book
           </a>
         </div>
@@ -443,139 +447,137 @@
     </section>
 
     <!-- 6. 4-STEP 45-DAY MOVE-IN JOURNEY -->
-    <section class="px-4 py-8 bg-gradient-to-b from-white via-slate-50 to-white border-t border-amber-200/60">
-      <div class="text-center mb-6">
-        <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Hassle-Free Execution</span>
-        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Our 45-Day Handover Process</h2>
+    <section class="px-3.5 sm:px-4 py-7 bg-gradient-to-b from-white via-slate-50 to-white border-t border-amber-200/60">
+      <div class="text-center mb-5">
+        <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Hassle-Free</span>
+        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">45-Day Handover Process</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <!-- Step 1 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-start gap-3.5 relative overflow-hidden">
-          <span class="text-3xl font-heading font-black text-amber-600/20 absolute right-3 top-2">01</span>
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-700 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
-            <i data-lucide="eye" class="w-5 h-5"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-start gap-3 relative overflow-hidden">
+          <span class="text-2xl sm:text-3xl font-heading font-black text-amber-600/20 absolute right-3 top-2">01</span>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-700 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
+            <i data-lucide="eye" class="w-4 h-4 sm:w-5 sm:h-5"></i>
           </div>
-          <div>
-            <h4 class="font-heading font-bold text-sm text-slate-900">1. Free 3D VR Design Walkthrough</h4>
-            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Experience your home virtually in VR with millimeter-accurate 3D walkthroughs.</p>
+          <div class="min-w-0">
+            <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-900 truncate">1. Free 3D VR Design</h4>
+            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Experience your home virtually in VR with accurate 3D walkthroughs.</p>
           </div>
         </div>
 
         <!-- Step 2 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-start gap-3.5 relative overflow-hidden">
-          <span class="text-3xl font-heading font-black text-emerald-600/20 absolute right-3 top-2">02</span>
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-700 to-teal-800 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
-            <i data-lucide="factory" class="w-5 h-5"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-start gap-3 relative overflow-hidden">
+          <span class="text-2xl sm:text-3xl font-heading font-black text-emerald-600/20 absolute right-3 top-2">02</span>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-emerald-700 to-teal-800 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
+            <i data-lucide="factory" class="w-4 h-4 sm:w-5 sm:h-5"></i>
           </div>
-          <div>
-            <h4 class="font-heading font-bold text-sm text-slate-900">2. German Factory CNC Crafting</h4>
-            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">All woodwork precision-cut on automated German CNC machines for zero dust at your site.</p>
+          <div class="min-w-0">
+            <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-900 truncate">2. German CNC Crafting</h4>
+            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Woodwork precision-cut on automated CNC machines for zero site dust.</p>
           </div>
         </div>
 
         <!-- Step 3 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-start gap-3.5 relative overflow-hidden">
-          <span class="text-3xl font-heading font-black text-orange-600/20 absolute right-3 top-2">03</span>
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-700 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
-            <i data-lucide="wrench" class="w-5 h-5"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-start gap-3 relative overflow-hidden">
+          <span class="text-2xl sm:text-3xl font-heading font-black text-orange-600/20 absolute right-3 top-2">03</span>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-orange-600 to-amber-700 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
+            <i data-lucide="wrench" class="w-4 h-4 sm:w-5 sm:h-5"></i>
           </div>
-          <div>
-            <h4 class="font-heading font-bold text-sm text-slate-900">3. 45-Day Swift Site Installation</h4>
-            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Trained company technicians assemble modules seamlessly with strict quality checks.</p>
+          <div class="min-w-0">
+            <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-900 truncate">3. 45-Day Installation</h4>
+            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Trained technicians assemble modules with strict quality audits.</p>
           </div>
         </div>
 
         <!-- Step 4 -->
-        <div class="luxury-card p-4 rounded-2xl flex items-start gap-3.5 relative overflow-hidden">
-          <span class="text-3xl font-heading font-black text-slate-600/20 absolute right-3 top-2">04</span>
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-800 to-slate-950 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
-            <i data-lucide="key" class="w-5 h-5"></i>
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl flex items-start gap-3 relative overflow-hidden">
+          <span class="text-2xl sm:text-3xl font-heading font-black text-slate-600/20 absolute right-3 top-2">04</span>
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-slate-800 to-slate-950 text-white flex items-center justify-center font-bold flex-shrink-0 shadow-md">
+            <i data-lucide="key" class="w-4 h-4 sm:w-5 sm:h-5"></i>
           </div>
-          <div>
-            <h4 class="font-heading font-bold text-sm text-slate-900">4. Key Handover & 10-Yr Certificate</h4>
-            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Deep post-installation cleaning + official 10-year warranty certificate handed over.</p>
+          <div class="min-w-0">
+            <h4 class="font-heading font-bold text-xs sm:text-sm text-slate-900 truncate">4. Key Handover</h4>
+            <p class="text-xs text-slate-500 mt-1 font-medium leading-relaxed">Deep cleaning + official 10-year warranty certificate handed over.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 7. PORTFOLIO & RECENT PROJECT SHOWCASE -->
-    <section class="py-8 px-4 border-t border-amber-200/60">
+    <section class="py-7 px-3.5 sm:px-4 border-t border-amber-200/60">
       <div class="flex items-center justify-between mb-4">
         <div>
           <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Real Projects</span>
-          <h2 class="text-xl font-display font-extrabold text-slate-900 mt-0.5">Completed Homes Gallery</h2>
+          <h2 class="text-lg sm:text-xl font-display font-extrabold text-slate-900 mt-0.5">Completed Homes Gallery</h2>
         </div>
-        <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full text-amber-900 text-xs font-bold shadow-sm">
+        <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full text-amber-900 text-xs font-bold shadow-sm">
           <span>Swipe</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </div>
       </div>
 
-      <!-- Horizontal Snap Carousel with Luxury Architecture Photos -->
-      <div class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory py-2">
-        <div class="snap-center flex-shrink-0 w-64 rounded-2xl overflow-hidden luxury-card border-2 border-amber-200 relative group">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Living Room Makeover" class="w-full h-44 object-cover group-hover:scale-108 transition-transform duration-500" loading="lazy" />
+      <!-- Horizontal Snap Carousel -->
+      <div class="flex gap-3.5 overflow-x-auto no-scrollbar snap-x snap-mandatory py-1">
+        <div class="snap-center flex-shrink-0 w-60 sm:w-64 rounded-2xl overflow-hidden luxury-card border-2 border-amber-200 relative group">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="Living Room Makeover" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
           <div class="p-3 bg-white border-t border-amber-100">
-            <p class="text-xs font-bold text-slate-900 font-heading">DLF Phase 5 • 3BHK Luxury Living</p>
-            <p class="text-[11px] text-amber-700 font-semibold">Italian Marble & Warm Ambient Louvers</p>
+            <p class="text-xs font-bold text-slate-900 font-heading">DLF Phase 5 • 3BHK Living</p>
+            <p class="text-[10px] text-amber-700 font-semibold">Italian Marble & Warm Ambient Louvers</p>
           </div>
         </div>
         
-        <div class="snap-center flex-shrink-0 w-64 rounded-2xl overflow-hidden luxury-card border-2 border-emerald-200 relative group">
-          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Modular Island Kitchen" class="w-full h-44 object-cover group-hover:scale-108 transition-transform duration-500" loading="lazy" />
+        <div class="snap-center flex-shrink-0 w-60 sm:w-64 rounded-2xl overflow-hidden luxury-card border-2 border-emerald-200 relative group">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Modular Island Kitchen" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
           <div class="p-3 bg-white border-t border-emerald-100">
-            <p class="text-xs font-bold text-slate-900 font-heading">GK-2 • German Acrylic Island Kitchen</p>
-            <p class="text-[11px] text-emerald-800 font-semibold">Quartz Countertop & Blum Servo Soft-Close</p>
+            <p class="text-xs font-bold text-slate-900 font-heading">GK-2 • Acrylic Island Kitchen</p>
+            <p class="text-[10px] text-emerald-800 font-semibold">Quartz Countertop & Blum Servo Soft-Close</p>
           </div>
         </div>
 
-        <div class="snap-center flex-shrink-0 w-64 rounded-2xl overflow-hidden luxury-card border-2 border-orange-200 relative group">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Master Bedroom Sanctuary" class="w-full h-44 object-cover group-hover:scale-108 transition-transform duration-500" loading="lazy" />
+        <div class="snap-center flex-shrink-0 w-60 sm:w-64 rounded-2xl overflow-hidden luxury-card border-2 border-orange-200 relative group">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Master Bedroom Sanctuary" class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
           <div class="p-3 bg-white border-t border-orange-100">
-            <p class="text-xs font-bold text-slate-900 font-heading">Noida Expressway • Master Bedroom</p>
-            <p class="text-[11px] text-orange-800 font-semibold">Fluted Wood Paneling & Smart Lighting</p>
+            <p class="text-xs font-bold text-slate-900 font-heading">Noida Expressway • Bedroom</p>
+            <p class="text-[10px] text-orange-800 font-semibold">Fluted Wood Paneling & Smart Lighting</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 8. MEET OUR PRINCIPAL ARCHITECTS -->
-    <section class="px-4 py-8 bg-gradient-to-b from-white via-amber-50/30 to-white border-t border-amber-200/60">
-      <div class="text-center mb-6">
+    <!-- 8. MEET OUR LEAD ARCHITECT -->
+    <section class="px-3.5 sm:px-4 py-7 bg-gradient-to-b from-white via-amber-50/30 to-white border-t border-amber-200/60">
+      <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Design Masters</span>
-        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Lead Interior Architects</h2>
+        <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Lead Interior Architect</h2>
       </div>
 
-      <div class="space-y-4">
-        <div class="luxury-card p-4 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-4 border-2 border-amber-100">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Ar. Meera Singhania" class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover shadow-md border-2 border-white flex-shrink-0" />
-          <div class="flex flex-col text-center sm:text-left">
-            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
-              <h3 class="font-heading font-black text-base text-slate-900">Ar. Meera Singhania</h3>
-              <span class="bg-amber-100 text-amber-900 text-[10px] font-extrabold px-2 py-0.5 rounded-md border border-amber-300">B.Arch • SPA Delhi</span>
-            </div>
-            <p class="text-xs text-amber-800 font-bold mb-1.5">Principal Design Director • 16+ Yrs Experience</p>
-            <p class="text-xs text-slate-600 font-medium leading-relaxed">Specialized in Sustainable Luxury, Biophilic Living spaces, and Modern Minimalist Penthouse architecture.</p>
+      <div class="luxury-card p-4 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-3.5 border-2 border-amber-100">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Ar. Meera Singhania" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover shadow-md border-2 border-white flex-shrink-0" />
+        <div class="flex flex-col text-center sm:text-left min-w-0">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mb-1">
+            <h3 class="font-heading font-black text-sm sm:text-base text-slate-900">Ar. Meera Singhania</h3>
+            <span class="bg-amber-100 text-amber-900 text-[9px] sm:text-[10px] font-extrabold px-2 py-0.5 rounded-md border border-amber-300">B.Arch • SPA Delhi</span>
           </div>
+          <p class="text-xs text-amber-800 font-bold mb-1">Principal Design Director • 16+ Yrs Experience</p>
+          <p class="text-xs text-slate-600 font-medium leading-relaxed">Specialized in Sustainable Luxury, Biophilic Living spaces, and Modern Minimalist Penthouse architecture.</p>
         </div>
       </div>
     </section>
 
-    <!-- 9. VERIFIED HOMEOWNER TESTIMONIALS -->
-    <section class="px-4 py-8 bg-white/70 border-t border-amber-200/60">
-      <div class="text-center mb-6">
+    <!-- 9. HOMEOWNER TESTIMONIALS -->
+    <section class="px-3.5 sm:px-4 py-7 bg-white/70 border-t border-amber-200/60">
+      <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent font-heading">Client Stories</span>
         <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Loved by 1,200+ Homeowners</h2>
       </div>
 
-      <div class="space-y-3.5">
+      <div class="space-y-3">
         <!-- Review 1 -->
-        <div class="luxury-card p-4 rounded-2xl border-l-4 border-l-amber-600">
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-l-amber-600">
           <div class="flex items-center justify-between mb-2">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-600 to-amber-700 text-white font-black flex items-center justify-center text-xs shadow-md">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-600 to-amber-700 text-white font-black flex items-center justify-center text-xs shadow-md">
                 AK
               </div>
               <div>
@@ -594,17 +596,17 @@
           <p class="text-xs text-slate-600 leading-relaxed font-medium">
             "Handed over our 3BHK exactly on Day 43! No budget overshoot, factory finish is 10x better than local carpenters, and the 3D VR match is 100% exact."
           </p>
-          <div class="flex items-center gap-1.5 mt-2.5 text-[10px] text-emerald-800 font-bold">
+          <div class="flex items-center gap-1 mt-2 text-[10px] text-emerald-800 font-bold">
             <i data-lucide="check-circle" class="w-3 h-3 text-emerald-700"></i>
             <span>Verified Houzz Review • 1 week ago</span>
           </div>
         </div>
 
         <!-- Review 2 -->
-        <div class="luxury-card p-4 rounded-2xl border-l-4 border-l-emerald-700">
+        <div class="luxury-card p-3.5 sm:p-4 rounded-2xl border-l-4 border-l-emerald-700">
           <div class="flex items-center justify-between mb-2">
-            <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-700 to-teal-800 text-white font-black flex items-center justify-center text-xs shadow-md">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-emerald-700 to-teal-800 text-white font-black flex items-center justify-center text-xs shadow-md">
                 SP
               </div>
               <div>
@@ -623,7 +625,7 @@
           <p class="text-xs text-slate-600 leading-relaxed font-medium">
             "Our modular kitchen looks like a million dollars. The soft-close Blum hinges and quartz countertop are top notch. Worth every single rupee!"
           </p>
-          <div class="flex items-center gap-1.5 mt-2.5 text-[10px] text-emerald-800 font-bold">
+          <div class="flex items-center gap-1 mt-2 text-[10px] text-emerald-800 font-bold">
             <i data-lucide="check-circle" class="w-3 h-3 text-emerald-700"></i>
             <span>Verified Google Review • 3 weeks ago</span>
           </div>
@@ -632,56 +634,56 @@
     </section>
 
     <!-- 10. FREQUENTLY ASKED QUESTIONS -->
-    <section class="px-4 py-8 bg-gradient-to-b from-white via-amber-50/40 to-white border-t border-amber-200/60">
-      <div class="text-center mb-6">
+    <section class="px-3.5 sm:px-4 py-7 bg-gradient-to-b from-white via-amber-50/40 to-white border-t border-amber-200/60">
+      <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Clarity First</span>
         <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Frequently Asked Questions</h2>
       </div>
 
-      <div class="space-y-3" id="faqAccordion">
+      <div class="space-y-2.5" id="faqAccordion">
         <div class="luxury-card rounded-2xl overflow-hidden border border-slate-200/80">
-          <button onclick="toggleFaq(1)" class="w-full p-4 text-left flex items-center justify-between gap-2 font-heading font-bold text-sm text-slate-900 focus:outline-none">
-            <span>What happens if there is a delay in the 45-day handover?</span>
-            <i id="faq-icon-1" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300"></i>
+          <button onclick="toggleFaq(1)" class="w-full p-3.5 text-left flex items-center justify-between gap-2 font-heading font-bold text-xs sm:text-sm text-slate-900 focus:outline-none">
+            <span>What happens if there is a delay in 45-day handover?</span>
+            <i id="faq-icon-1" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div id="faq-content-1" class="accordion-content px-4 pb-4 text-xs text-slate-600 font-medium leading-relaxed">
-            We have an official written clause in our contract: If we delay beyond 45 days, we pay you ₹1,000 per day of delay directly into your bank account.
+          <div id="faq-content-1" class="accordion-content px-3.5 pb-3.5 text-xs text-slate-600 font-medium leading-relaxed">
+            We have a strict contract clause: If we delay beyond 45 days, we pay you ₹1,000 per day of delay directly into your bank account.
           </div>
         </div>
 
         <div class="luxury-card rounded-2xl overflow-hidden border border-slate-200/80">
-          <button onclick="toggleFaq(2)" class="w-full p-4 text-left flex items-center justify-between gap-2 font-heading font-bold text-sm text-slate-900 focus:outline-none">
+          <button onclick="toggleFaq(2)" class="w-full p-3.5 text-left flex items-center justify-between gap-2 font-heading font-bold text-xs sm:text-sm text-slate-900 focus:outline-none">
             <span>Are there any hidden costs after signing the estimate?</span>
-            <i id="faq-icon-2" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300"></i>
+            <i id="faq-icon-2" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div id="faq-content-2" class="accordion-content px-4 pb-4 text-xs text-slate-600 font-medium leading-relaxed">
+          <div id="faq-content-2" class="accordion-content px-3.5 pb-3.5 text-xs text-slate-600 font-medium leading-relaxed">
             Zero hidden costs. Our Bill of Quantities (BOQ) lists every square foot of plywood, laminate brand, and hardware piece with 100% price lock.
           </div>
         </div>
 
         <div class="luxury-card rounded-2xl overflow-hidden border border-slate-200/80">
-          <button onclick="toggleFaq(3)" class="w-full p-4 text-left flex items-center justify-between gap-2 font-heading font-bold text-sm text-slate-900 focus:outline-none">
+          <button onclick="toggleFaq(3)" class="w-full p-3.5 text-left flex items-center justify-between gap-2 font-heading font-bold text-xs sm:text-sm text-slate-900 focus:outline-none">
             <span>How does the 10-Year Warranty work?</span>
-            <i id="faq-icon-3" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300"></i>
+            <i id="faq-icon-3" data-lucide="chevron-down" class="w-4 h-4 text-amber-700 transition-transform duration-300 flex-shrink-0"></i>
           </button>
-          <div id="faq-content-3" class="accordion-content px-4 pb-4 text-xs text-slate-600 font-medium leading-relaxed">
-            Our warranty covers all structural woodwork against delamination, termites, and hardware malfunctions with free replacement and priority service.
+          <div id="faq-content-3" class="accordion-content px-3.5 pb-3.5 text-xs text-slate-600 font-medium leading-relaxed">
+            Our warranty covers all structural woodwork against delamination, termites, and hardware malfunctions with free replacement.
           </div>
         </div>
       </div>
     </section>
 
     <!-- 11. 10-SECOND QUICK ESTIMATE FORM -->
-    <section id="quick-estimate" class="px-4 py-8 border-t border-amber-200/60 relative">
-      <div class="gold-glow-border p-5 sm:p-6">
-        <div class="flex items-center gap-2 text-amber-700 text-xs font-black uppercase tracking-wider mb-1 font-heading">
+    <section id="quick-estimate" class="px-3.5 sm:px-4 py-7 border-t border-amber-200/60 relative">
+      <div class="gold-glow-border p-4 sm:p-5">
+        <div class="flex items-center gap-1.5 text-amber-700 text-xs font-black uppercase tracking-wider mb-1 font-heading">
           <i data-lucide="calendar-check" class="w-4 h-4 text-amber-700"></i>
-          <span>Instant Free 3D VR Slot</span>
+          <span>Free 3D VR Slot</span>
         </div>
-        <h2 class="text-xl sm:text-2xl font-display font-black text-slate-900">Get Instant Custom Quote</h2>
-        <p class="text-xs text-slate-500 mb-5 font-medium">Receive our portfolio lookbook + 3D cost estimate directly on WhatsApp.</p>
+        <h2 class="text-lg sm:text-2xl font-display font-black text-slate-900">Get Instant Custom Quote</h2>
+        <p class="text-xs text-slate-500 mb-4 font-medium">Receive our portfolio lookbook + 3D cost estimate directly on WhatsApp.</p>
 
-        <form id="interiorForm" onsubmit="handleInteriorSubmit(event)" class="space-y-3.5">
+        <form id="interiorForm" onsubmit="handleInteriorSubmit(event)" class="space-y-3">
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
             <div class="relative">
@@ -698,10 +700,10 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div>
               <label class="block text-xs font-bold text-slate-700 mb-1">Home Size / Scope *</label>
-              <select id="homeScope" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm text-slate-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 transition-all font-medium">
+              <select id="homeScope" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 transition-all font-medium">
                 <option value="Complete 3BHK Turnkey Interior">Complete 3BHK Turnkey Interior</option>
                 <option value="Complete 2BHK Turnkey Interior">Complete 2BHK Turnkey Interior</option>
                 <option value="Complete 4BHK / Villa Interior">Complete 4BHK / Villa Interior</option>
@@ -711,8 +713,8 @@
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Handover Time *</label>
-              <select id="handoverTimeline" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-sm text-slate-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 transition-all font-medium">
+              <label class="block text-xs font-bold text-slate-700 mb-1">Handover Timeline *</label>
+              <select id="handoverTimeline" required class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2.5 px-3 text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-600/20 transition-all font-medium">
                 <option value="Immediate (Within 45 Days)">Immediate (Within 45 Days)</option>
                 <option value="Next 2-3 Months">Next 2-3 Months</option>
                 <option value="Possession in 6 Months">Possession in 6 Months</option>
@@ -720,12 +722,12 @@
             </div>
           </div>
 
-          <button type="submit" class="w-full py-4 px-4 rounded-xl bg-gradient-to-r from-amber-700 via-amber-800 to-emerald-900 hover:brightness-110 active:scale-[0.98] font-heading font-black text-white text-sm flex items-center justify-center gap-2 shadow-xl shadow-amber-900/30 transition-all duration-200 cursor-pointer">
+          <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-700 via-amber-800 to-emerald-900 hover:brightness-110 active:scale-[0.98] font-heading font-black text-white text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xl shadow-amber-900/30 transition-all duration-200 cursor-pointer">
             <i data-lucide="send" class="w-4 h-4 fill-white"></i>
             <span>Send Design Request via WhatsApp</span>
           </button>
           
-          <p class="text-[11px] text-center text-slate-500 flex items-center justify-center gap-1.5 pt-1 font-medium">
+          <p class="text-[10px] sm:text-[11px] text-center text-slate-500 flex items-center justify-center gap-1 pt-1 font-medium">
             <i data-lucide="lock" class="w-3.5 h-3.5 text-emerald-700"></i>
             <span>100% Privacy • Free 3D VR Floorplan Included</span>
           </p>
@@ -734,36 +736,36 @@
     </section>
 
     <!-- 12. EXPERIENCE STUDIO LOCATION & MAP -->
-    <section class="px-4 py-8 bg-white/70 border-t border-amber-200/60">
+    <section class="px-3.5 sm:px-4 py-7 bg-white/70 border-t border-amber-200/60">
       <div class="text-center mb-5">
         <span class="text-xs font-black uppercase tracking-widest bg-gradient-to-r from-amber-700 to-emerald-800 bg-clip-text text-transparent font-heading">Visit Our Studio</span>
         <h2 class="fluid-h2 font-display font-extrabold text-slate-900 mt-1">Experience Center & Studio</h2>
       </div>
 
-      <div class="luxury-card rounded-2xl overflow-hidden p-4 space-y-4 border-2 border-amber-100">
-        <div class="space-y-3 text-xs sm:text-sm">
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-amber-100 text-amber-800 border border-amber-200 flex-shrink-0 shadow-sm">
+      <div class="luxury-card rounded-2xl overflow-hidden p-3.5 sm:p-4 space-y-3.5 border-2 border-amber-100">
+        <div class="space-y-2.5 text-xs sm:text-sm">
+          <div class="flex items-start gap-2.5">
+            <div class="p-2 rounded-xl bg-amber-100 text-amber-800 border border-amber-200 flex-shrink-0 shadow-sm">
               <i data-lucide="map-pin" class="w-4 h-4"></i>
             </div>
-            <div>
+            <div class="min-w-0">
               <p class="font-bold text-slate-900">UrbanCraft Luxury Experience Center</p>
-              <p class="text-slate-600 text-xs mt-0.5 font-medium">Plot 42, Golf Course Road, Sector 43 (Near One Horizon Center), Gurugram, Delhi NCR - 122002</p>
+              <p class="text-slate-600 text-xs mt-0.5 font-medium leading-relaxed">Plot 42, Golf Course Road, Sector 43 (Near One Horizon Center), Gurugram, Delhi NCR</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-3">
-            <div class="p-2.5 rounded-xl bg-emerald-100 text-emerald-800 border border-emerald-200 flex-shrink-0 shadow-sm">
+          <div class="flex items-start gap-2.5">
+            <div class="p-2 rounded-xl bg-emerald-100 text-emerald-800 border border-emerald-200 flex-shrink-0 shadow-sm">
               <i data-lucide="clock" class="w-4 h-4"></i>
             </div>
-            <div>
+            <div class="min-w-0">
               <p class="font-bold text-slate-900">Visiting Hours</p>
               <p class="text-slate-600 text-xs mt-0.5 font-medium">Mon - Sun: 10:30 AM – 8:00 PM (All 7 Days Open)</p>
             </div>
           </div>
         </div>
 
-        <div class="w-full h-48 rounded-xl overflow-hidden border border-slate-200 relative shadow-sm">
+        <div class="w-full h-44 rounded-xl overflow-hidden border border-slate-200 relative shadow-sm">
           <iframe 
             title="UrbanCraft Studio Location Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14035.795893375762!2d77.08630735!3d28.4594965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18dc48c08183%3A0xb3551db7f7b3df62!2sGolf%20Course%20Rd%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
@@ -779,9 +781,9 @@
     </section>
 
     <!-- 13. DEVELOPER FOOTER -->
-    <footer class="px-4 py-8 text-center text-xs text-slate-500 border-t border-amber-200/60 flex flex-col items-center gap-2">
+    <footer class="px-4 py-7 text-center text-xs text-slate-500 border-t border-amber-200/60 flex flex-col items-center gap-2">
       <div class="flex items-center gap-2 text-slate-400 text-xs">
-        <span>ISO 9001:2015 Certified Manufacturing</span>
+        <span>ISO 9001:2015 Certified</span>
         <span>•</span>
         <span>FSC Certified Woods</span>
       </div>
@@ -794,20 +796,20 @@
       </p>
     </footer>
 
-    <!-- 14. STICKY MOBILE DOCK (Luxury Warm Bronze & Emerald) -->
-    <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl z-50 p-2.5 bg-[#faf8f5]/95 backdrop-blur-2xl border-t border-amber-300 shadow-[0_-8px_30px_rgba(217,119,6,0.15)] flex items-center justify-between gap-2.5">
-      <a href="tel:+919876543210" class="flex-1 py-2.5 px-3 rounded-xl bg-white border border-amber-300 text-slate-800 text-xs font-bold font-heading flex items-center justify-center gap-1.5 active:scale-95 transition-all shadow-sm">
-        <i data-lucide="phone-call" class="w-4 h-4 text-amber-700"></i>
+    <!-- 14. STICKY MOBILE DOCK -->
+    <div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-xl z-50 p-2.5 bg-[#faf8f5]/95 backdrop-blur-2xl border-t border-amber-300 shadow-[0_-8px_30px_rgba(217,119,6,0.15)] flex items-center justify-between gap-2">
+      <a href="tel:+919876543210" class="flex-1 py-2.5 px-2 rounded-xl bg-white border border-amber-300 text-slate-800 text-xs font-bold font-heading flex items-center justify-center gap-1 active:scale-95 transition-all shadow-sm">
+        <i data-lucide="phone-call" class="w-3.5 h-3.5 text-amber-700"></i>
         <span>Call</span>
       </a>
 
-      <a href="https://wa.me/919876543210?text=Hi%20UrbanCraft,%20I%20want%20to%20get%20a%20Free%203D%20Design%20%26%20Cost%20Estimate." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-105 text-white text-xs font-black font-heading flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-800/30 animate-pulse-slow active:scale-95 transition-all">
-        <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+      <a href="https://wa.me/919876543210?text=Hi%20UrbanCraft,%20I%20want%20to%20get%20a%20Free%203D%20Design%20%26%20Cost%20Estimate." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-2 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-800 hover:brightness-105 text-white text-xs font-black font-heading flex items-center justify-center gap-1 shadow-lg shadow-emerald-800/30 animate-pulse-slow active:scale-95 transition-all">
+        <i data-lucide="message-circle" class="w-3.5 h-3.5 fill-white"></i>
         <span>WhatsApp</span>
       </a>
 
-      <a href="#quick-estimate" class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-600 via-amber-700 to-emerald-800 hover:brightness-105 text-white text-xs font-black font-heading flex items-center justify-center gap-1 shadow-md shadow-amber-800/25 active:scale-95 transition-all">
-        <i data-lucide="calculator" class="w-4 h-4"></i>
+      <a href="#quick-estimate" class="flex-1 py-2.5 px-2 rounded-xl bg-gradient-to-r from-amber-600 via-amber-700 to-emerald-800 hover:brightness-105 text-white text-xs font-black font-heading flex items-center justify-center gap-1 shadow-md shadow-amber-800/25 active:scale-95 transition-all">
+        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
         <span>Free Quote</span>
       </a>
     </div>
@@ -829,9 +831,9 @@
       selectedType = type;
       currentBase = basePrice;
       document.querySelectorAll('.type-btn').forEach(b => {
-        b.className = 'type-btn py-2.5 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all';
+        b.className = 'type-btn py-2 px-2 rounded-xl border border-slate-200 bg-white text-slate-700 font-heading font-bold text-xs text-center hover:border-amber-300 transition-all';
       });
-      btn.className = 'type-btn py-2.5 px-2 rounded-xl border border-amber-400 bg-amber-50 text-amber-900 font-heading font-black text-xs text-center transition-all shadow-sm';
+      btn.className = 'type-btn py-2 px-2 rounded-xl border border-amber-400 bg-amber-50 text-amber-900 font-heading font-black text-xs text-center transition-all shadow-sm';
       updatePriceDisplay();
     }
 
